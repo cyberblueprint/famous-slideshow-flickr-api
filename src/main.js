@@ -13,14 +13,12 @@ define(function(require, exports, module) {
     var mainContext = Engine.createContext();
 
 
-	var appView = new View();
-
 	function initApp(data) {
         // parses out reponse data and retrieves array of urls
         data = SlideData.parse(data);
 
         // instantiates AppView with our url data
-        var appView = new AppView({ data : data });
+        var appView = new View({ data : data });
 
         mainContext.add(appView);
     }
